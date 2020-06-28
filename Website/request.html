@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type = "text/javascript" >
+  function preventBack(){window.history.forward();}
+   setTimeout("preventBack()", 0);
+   window.onunload=function(){null};
+</script>
+</head>
+
+<style>
+
+body{
+  background-color: rgb(52, 40, 121);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th{
+  background-color: black;
+  color: #dddddd;
+  padding: 20px;
+  border: 5px solid #dddddd;
+  text-align: center;
+
+}
+
+td{
+  background-color: white;
+  border: 5px solid #dddddd;
+  text-align: center;
+  padding: 20px;
+}
+nav{
+  height: 110px;
+  background-color: rgb(94, 133, 185);
+}
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+
+ <script>
+   var firebaseConfig = {
+    apiKey: "AIzaSyCviScHiR3v7Jk3uqEMl6a1YvwFh8Z8-40",
+    authDomain: "smart-home-91b82.firebaseapp.com",
+    databaseURL: "https://smart-home-91b82.firebaseio.com",
+    projectId: "smart-home-91b82",
+    storageBucket: "smart-home-91b82.appspot.com",
+    messagingSenderId: "8500603343",
+    appId: "1:8500603343:web:13a64f568745f3c34a0aba",
+    measurementId: "G-SWPJ2T5EHQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ </script>
+
+
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="problem.html">PROBLEM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">FEEDBACK</a>
+            </li>
+          </ul>
+
+              <form class="form-inline my-2 my-lg-0"></form>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="window.location.href='login.html';">HOME</button>
+          </form>
+             </div>
+      </nav>
+
+
+      <br>
+      <br>
+     
+    
+<center><h2 style="color: bisque;">REQUEST LIST</h2></center>
+<br>
+
+<center>
+<table id="tbl_users_list">
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>REQUEST</th>
+    <th>TIMESTAMP</th>
+  </tr>
+  
+</table>
+</center>
+<script>
+ 
+    var tblUsers = document.getElementById('tbl_users_list');
+    var databaseRef = firebase.database().ref('Request');
+    var rowIndex = 1;
+    
+    databaseRef.once('value', function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+     var childKey = childSnapshot.key;
+     var childData = childSnapshot.val();
+     
+     var row = tblUsers.insertRow(rowIndex);
+     var cellId = row.insertCell(0);
+     var cellName = row.insertCell(1);
+     var cellMessage = row.insertCell(2);
+     var cellTimeStamp = row.insertCell(3);
+     cellId.appendChild(document.createTextNode(childKey));
+     cellName.appendChild(document.createTextNode(childData.Name));
+     cellMessage.appendChild(document.createTextNode(childData.Message));
+     cellTimeStamp.appendChild(document.createTextNode(childData.TimeStamp));
+     
+     rowIndex = rowIndex + 1;
+      });
+    });
+</script>  
+
+
+
+</body>
+
+
+
+
+</html>

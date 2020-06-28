@@ -1,0 +1,254 @@
+<html>
+<head>
+  <title>ADMIN WEBSITE</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+  
+  <script type = "text/javascript" >
+    function preventBack(){window.history.forward();}
+     setTimeout("preventBack()", 0);
+     window.onunload=function(){null};
+ </script>
+  
+</head>
+<style>
+  body {
+  background: rgb(52, 40, 121);
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+h3{
+  color: #fff;
+  text-align: center;
+}
+
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.main-div{
+  width: 20%;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 20px;
+  display: none;
+}
+
+.main-div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+  border: 1px solid rgb(250, 243, 243);
+}
+
+.main-div button{
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+}
+nav{
+  height: 110px;
+  background-color: rgb(94, 133, 185);
+}
+img{
+  height: 150px;
+  width: 150px;
+}
+
+
+</style>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>WELCOME ADMIN</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+ <button onclick="login()">LOGIN</button>
+  </div>
+  
+  <div id="user_div" class="loggedin-div">
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" id="top">WELCOME ADMIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#abo">ABOUT<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#req">REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pro">PROBLEM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fee">FEEDBACK</a>
+            </li>
+          </ul>
+
+              <form class="form-inline my-2 my-lg-0"></form>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="logout()">LOGOUT</button>
+          </form>
+             </div>
+      </nav>
+<!--cards-->
+<br>
+  <br>
+  <br>
+  <center>
+    <div class="card" id="req" style="width: 80%; height: 30rem;">
+      <div class="card-body" >
+        <h1 class="card-title"><b>REQUEST</b></h1>
+        <br>
+        <img src="request.jpg">
+        <br>
+        <br>
+        <p class="card-text" style="font-size: 20px;"><b>The user may have certain requests for you check them</b></p>
+        <br>
+        <br>
+        <br>
+        <a href="request.html" class="btn btn-primary">CHECK</a>
+      </div>
+    </div>
+  </center>
+  <br>
+  <br>
+  <br>
+  <center>
+    <div class="card" id="pro" style="width: 80%; height: 30rem;">
+      <div class="card-body" >
+        <h1 class="card-title"><b>PROBLEM</b></h1>
+        <br>
+        <img src="problem.jpg">
+        <br>
+        <br>
+        <p class="card-text" style="font-size: 20px;"><b>The user may have certain problems try to fix them quickly</b></p>
+        <br>
+        <br>
+        <br>
+        <a href="problem.html" class="btn btn-primary">CHECK</a>
+      </div>
+    </div></center>
+  <br>
+  <br>
+  <br>
+  <center>
+    <div class="card" id="fee" style="width: 80%; height: 30rem;">
+      <div class="card-body" >
+        <h1 class="card-title"><b>FEEDBACK</b></h1>
+        <br>
+        <img src="feedback.png">
+        <br>
+        <br>
+        <p class="card-text" style="font-size: 20px;"><b>The user may have some intresting feedback for you read them carefully</b></p>
+        <br>
+        <br>
+        <br>
+        <a href="feedback.html" class="btn btn-primary">CHECK</a>
+      </div>
+    </div>
+  </center>
+  <br>
+  <br>
+  <center>
+    <div>
+      <h1 style="color: blanchedalmond;" id="abo">ABOUT</h1>
+      <p style="color: blanchedalmond;">This website is for the admin in order to check the request and problems made by the user. The website also displays the feeback given by the users. All the details displayed in the website is on a real time basis.</p>
+    </div>
+  </center>
+
+  <br>
+  <br>
+<center><a href="#top" class="btn btn-primary">BACK TO TOP</a></center>
+<br>
+<br>
+
+    
+  
+
+
+
+
+
+      </div> <!--everything inside this-->
+      
+      
+
+
+
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="login.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAUF8_DYUB_V-Skon4Eu5VYGrSnz_eRvD0",
+    authDomain: "web-login-79367.firebaseapp.com",
+    databaseURL: "https://web-login-79367.firebaseio.com",
+    projectId: "web-login-79367",
+    storageBucket: "web-login-79367.appspot.com",
+    messagingSenderId: "413446720012",
+    appId: "1:413446720012:web:065cfd0c618ade7490fc29",
+    measurementId: "G-P7EK8ZW5KQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  </script>
+  <script src="login.js"></script>
+
+</body>
+</html>
