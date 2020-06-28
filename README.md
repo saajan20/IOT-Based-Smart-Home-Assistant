@@ -9,16 +9,13 @@ The project consists of different modules which perform their respective tasks a
 a hardware module and a module where the appliances can be controlled through the Google assistant.
 
 ![](img/propose1.jpg)
-The above system proposes how the user can control the appliances through a voice command using google assistant. According to the proposed system the user needs to give a voice command to the google assistant the command will be validated. 
-Once a valid command is said the method, which in this project is IFTTT and MQTT Broker will be used to send the signal to the controller.
-The controller then triggers the driver and the required operation is performed.
+
+The above system proposes how the user can control the appliances through a voice command using google assistant. According to the proposed system the user needs to give a voice command to the google assistant the command will be validated. Once a valid command is said the method, which in this project is IFTTT and MQTT Broker will be used to send the signal to the controller. The controller then triggers the driver and the required operation is performed.
 
 ![](img/propose2.jpeg)
-The above system is a proposed hardware module for the project. According to the proposed system, the controller will have n number of input and output channels, it also includes a wifi module along with an external power supply.
-All the sensors namely motion, temperature, humidity, fire, gas, sound intensity, light intensity pass their sensor value to the input channel, the output channel will be used to trigger the appliances.
-Our controller requires an inbuilt wifi module to connect to the MQTT Broker through the gateway.
+
+The above system is a proposed hardware module for the project. According to the proposed system, the controller will have n number of input and output channels, it also includes a wifi module along with an external power supply. All the sensors namely motion, temperature, humidity, fire, gas, sound intensity, light intensity pass their sensor value to the input channel, the output channel will be used to trigger the appliances. Our controller requires an inbuilt wifi module to connect to the MQTT Broker through the gateway.
 
 ![](img/propose3.jpeg)
-The above system is a proposed software module for the project. The software module consists of an android application, through this application the user can monitor all the appliances and also monitor and analyze all the sensor values. 
-The user will also receive a notification if any of the incidents such as intrusion, gas leakage or fire breakage occurs.
-The controller sends all the values to the database in real time, all these values can be monitored by the user once the user logs in to the android application.
+
+The above system is a proposed software module for the project. The software module consists of an android application, through this application the user can monitor all the appliances and also monitor and analyze all the sensor values. The user will also receive a notification if any of the incidents such as intrusion, gas leakage or fire breakage occurs. The controller sends all the values to the database in real time, all these values can be monitored by the user once the user logs in to the android application.
