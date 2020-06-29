@@ -44,16 +44,16 @@
 #define flame   D8
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID       "SAAJAN"
-#define WLAN_PASS       "saajanjha"
-#define FIREBASE_AUTH   "5cpzLONefCGgBSputjHSWRYIIMqLk2RWWzEGM9tn"
-#define FIREBASE_HOST   "smart-home-91b82.firebaseio.com"
+#define WLAN_SSID       "Wifi Name"
+#define WLAN_PASS       "Wifi Password"
+#define FIREBASE_AUTH   "Firebase Auth Key"
+#define FIREBASE_HOST   "Firebase Host Name"
 /************************* Adafruit.io Setup *********************************/
 
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
 #define AIO_USERNAME    "saajan_2"
-#define AIO_KEY         "7233abe17323402583cf6b4199df9c9f"
+#define AIO_KEY         "Your AIO_Key"
 
 /************ Global State (you don't need to change this!) ******************/
 
