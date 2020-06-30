@@ -28,7 +28,7 @@ The software module consists of an android application, through this application
 
 <img src="img/temp4.jpeg" width="25%">        <img src="img/temp2.jpeg" width="25%">    <img src="img/temp3.jpeg" width="25%">
 
-To know more read the research paper [here](https://www.ijream.org/IJREAM_V06I03.html).
+**To know more read the research paper [here](https://www.ijream.org/IJREAM_V06I03.html).**
 
 
 
