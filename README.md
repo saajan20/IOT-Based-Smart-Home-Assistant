@@ -18,3 +18,17 @@ According to the above proposed system, the controller will have n number of inp
 ![](img/propose3.jpeg)
 
 The software module consists of an android application, through this application the user can monitor all the appliances and also monitor and analyze all the sensor values. The user will also receive a notification if any of the incidents such as intrusion, gas leakage or fire breakage occurs. The controller sends all the values to the database in real time, all these values can be monitored by the user once the user logs in to the android application.
+
+## Snapshots
+<img src="img/login.jpeg" width="25%">          <img src="img/home.jpeg" width="25%">         <img src="img/appliance.jpeg" width="25%"> 
+
+<img src="img/warning.jpeg" width="25%">        <img src="img/profile.jpeg" width="25%">      <img src="img/feedback.jpeg" width="25%">
+
+<img src="img/Notification.jpeg" width="25%">   <img src="img/Notification2.jpeg" width="25%"> <img src="img/temp1.jpeg" width="25%">
+
+<img src="img/temp4.jpeg" width="25%">        <img src="img/temp2.jpeg" width="25%">    <img src="img/temp3.jpeg" width="25%">
+
+
+
+
+
